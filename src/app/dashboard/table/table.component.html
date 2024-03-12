@@ -1,0 +1,34 @@
+<!-- table.component.html -->
+<div class="table-container">
+    <div class="search-box">
+        <input type="text" [(ngModel)]="searchQuery" (keyup)="search()" placeholder="Search Cafes">
+    </div>
+    <table>
+        <thead>
+            <th *ngFor="let col of displayedColumns">
+                {{ col | titlecase }}
+                <i class="fa fa-arrow-up" *ngIf="sortField === col && sortOrder === 'asc'"
+                    (click)="onSort(col, 'desc')"></i>
+                <i class="fa fa-arrow-down" *ngIf="sortField === col && sortOrder === 'desc'"
+                    (click)="onSort(col, 'asc')"></i>
+                <i class="fa fa-sort" *ngIf="sortField !== col" (click)="onSort(col, 'asc')"></i>
+            </th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let row of filteredData | paginate: { itemsPerPage: pageSize, currentPage: currentPage }">
+                <td *ngFor="let col of displayedColumns">{{ row[col] }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="pagination">
+        <div class="pagination-buttons">
+            <button class="prev" [disabled]="currentPage === 1"
+                (click)="onPageChange(currentPage - 1)">Previous</button>
+            <button *ngFor="let page of totalPagesArray" [class.active]="currentPage === page"
+                (click)="onPageChange(page)">{{ page }}</button>
+            <button class="next" [disabled]="currentPage === totalPages"
+                (click)="onPageChange(currentPage + 1)">Next</button>
+        </div>
+        <span>Page {{ currentPage }} of {{ totalPages }}</span>
+    </div>
+</div>
