@@ -82,6 +82,11 @@ export class TableComponent implements OnInit {
     this.cdRef.markForCheck();
   }
 
-
-
+  changePageSize(){
+    const selectedPageSize = parseInt((document.querySelector('.page-size-box') as HTMLSelectElement).value);
+    this.pageSize = selectedPageSize;
+    this.currentPage = 1;
+    console.log(selectedPageSize);
+    this.totalPages;
+  }
 }

@@ -9,17 +9,46 @@ $primary: #007bff; // Adjust colors as needed
     /* Add horizontal scroll for small screens */
 }
 
-.search-box {
-    position: relative;
-    margin-bottom: 1rem;
+.page-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.05rem;
+
+    .page-size{
+        display: flex;
+        align-items: center;
+
+        span{
+            
+        }
+
+        .page-size-box{
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #fff;
+            cursor: pointer;
+            margin-right: 0.5rem;
+            margin-left: 0.5rem;
+            outline: none;
+        }
+    }
+
+    .search-box {
+        position: relative;
+        margin-bottom: 1rem;
+
+        input {
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 100%;
+            outline: none;
+        }
+    }
 }
 
-.search-box input {
-    padding: 0.5rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    width: 100%;
-}
 
 table {
     width: 100%;

@@ -1,8 +1,21 @@
 <!-- table.component.html -->
 <div class="table-container">
-    <div class="search-box">
-        <input type="text" [(ngModel)]="searchQuery" (keyup)="search()" placeholder="Search Cafes">
+    <div class="page-container">
+        <div class="page-size">
+            <span>Show</span>
+            <select class="page-size-box" (change)="changePageSize()">
+                <option class="active-page-size" value="5">5</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+            </select>
+            <span>Entries</span>
+        </div>
+        <div class="search-box">
+            <input type="text" [(ngModel)]="searchQuery" (keyup)="search()" placeholder="Search Cafes">
+        </div>
     </div>
+
     <table>
         <thead>
             <th *ngFor="let col of displayedColumns">
