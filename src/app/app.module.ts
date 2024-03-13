@@ -21,9 +21,11 @@ import { BarChartComponent } from './dashboard/graph/bar-chart/bar-chart.compone
 import { FormsModule } from '@angular/forms';
 import { NgChartsModule } from 'ng2-charts';
 
+
 import { PieChartComponent } from './dashboard/graph/pie-chart/pie-chart.component';
 import { TableComponent } from './dashboard/table/table.component';
 import { PaginatePipe } from './share/pipes/paginate.pipe';
+import { LineChartComponent } from './dashboard/graph/line-chart/line-chart.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,8 @@ import { PaginatePipe } from './share/pipes/paginate.pipe';
     BarChartComponent,
     PieChartComponent,
     TableComponent,
-    PaginatePipe
+    PaginatePipe,
+    LineChartComponent
   ],
   imports: [
     BrowserModule,
