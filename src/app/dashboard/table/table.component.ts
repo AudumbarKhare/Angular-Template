@@ -1,10 +1,6 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
-
-interface Cafe {
-  name: string;
-  location: string;
-  category: string;
-}
+import { DashboardService } from 'src/app/service/dashboard.service';
+import { BranchLocation } from 'src/app/share/interface/branchDetials';
 
 @Component({
   selector: 'app-table',
@@ -15,40 +11,29 @@ export class TableComponent implements OnInit {
   sortField: string = ''; // Currently sorted field
   sortOrder: 'asc' | 'desc' = 'asc';
 
+  data: BranchLocation[] = [];
 
-  data: Cafe[] = [
-    { name: 'Central Perk', location: 'New York City, USA', category: 'Coffee Shop' },
-    { name: 'The Grind', location: 'London, UK', category: 'Coffee Shop' },
-    { name: 'Cafe Du Monde', location: 'New Orleans, USA', category: 'Cafe' },
-    { name: 'Central Perk', location: 'New York City, USA', category: 'Coffee Shop' },
-    { name: 'The Grind', location: 'London, UK', category: 'Coffee Shop' },
-    { name: 'Cafe Du Monde', location: 'New Orleans, USA', category: 'Cafe' },
-    { name: 'Central Perk', location: 'New York City, USA', category: 'Coffee Shop' },
-    { name: 'The Grind', location: 'London, UK', category: 'Coffee Shop' },
-    { name: 'Cafe Du Monde', location: 'New Orleans, USA', category: 'Cafe' },
-    { name: 'Central Perk', location: 'New York City, USA', category: 'Coffee Shop' },
-    { name: 'The Grind', location: 'London, UK', category: 'Coffee Shop' },
-    { name: 'Cafe Du Monde', location: 'New Orleans, USA', category: 'Cafe' },
-  ];
-
-  displayedColumns: string[] = ['name', 'location', 'category'];
+  displayedColumns: string[] = ['owner', 'state', 'city'];
   currentPage: number = 1;
   pageSize: number = 10;
-  filteredData: any[] = this.data;
+  filteredData: BranchLocation[] = [];
   searchQuery: string = '';
 
-  constructor(private cdRef: ChangeDetectorRef) { }
+  constructor(private cdRef: ChangeDetectorRef, private _dashboardService: DashboardService) { }
 
   ngOnInit(): void {
-
+    this._dashboardService.getBranchData().subscribe(res => {
+      this.data = res;
+      this.filteredData = res;
+    });
   }
 
   search() {
     this.filteredData = this.data.filter(row => {
       const searchText = this.searchQuery.toLowerCase();
-      return row.name.toLowerCase().includes(searchText) ||
-        row.location.toLowerCase().includes(searchText) ||
-        row.category.toLowerCase().includes(searchText);
+      return row.state.toLowerCase().includes(searchText) ||
+        row.city.toLowerCase().includes(searchText) ||
+        row.owner.toLowerCase().includes(searchText);
     });
     this.currentPage = 1; // Reset page on search
   }
@@ -82,7 +67,7 @@ export class TableComponent implements OnInit {
     this.cdRef.markForCheck();
   }
 
-  changePageSize(){
+  changePageSize() {
     const selectedPageSize = parseInt((document.querySelector('.page-size-box') as HTMLSelectElement).value);
     this.pageSize = selectedPageSize;
     this.currentPage = 1;

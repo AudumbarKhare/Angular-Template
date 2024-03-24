@@ -1,0 +1,191 @@
+[
+    {
+        "state": "Andhra Pradesh",
+        "city": "Amaravati",
+        "latitude": 16.5000,
+        "longitude": 80.2167,
+        "owner": "Ramoji Rao"
+    },
+    {
+        "state": "Arunachal Pradesh",
+        "city": "Itanagar",
+        "latitude": 27.5833,
+        "longitude": 93.6167,
+        "owner": "Nabam Atum"
+    },
+    {
+        "state": "Maharashtra",
+        "city": "Mumbai",
+        "latitude": 19.01699038,
+        "longitude": 72.8569893,
+        "owner": "Sarjerao Ghadage"
+    },
+    {
+        "state": "Maharashtra",
+        "city": "Pune",
+        "latitude": 18.53001752,
+        "longitude": 73.85000362,
+        "owner": "Nitin Bhosale"
+    },
+    {
+        "state": "Karnataka",
+        "city": "Bangalore",
+        "latitude": 12.96999514,
+        "longitude": 77.56000972,
+        "owner": "Kanika Neogi"
+    },
+    {
+        "state": "Telangana",
+        "city": "Hyderabad",
+        "latitude": 17.39998313,
+        "longitude": 78.47995357,
+        "owner": "Telangana Chinnodu"
+    },
+    {
+        "state": "Delhi",
+        "city": "New Delhi",
+        "latitude": 28.60002301,
+        "longitude": 77.19998002,
+        "owner": "Umesh Chatte"
+    },
+    {
+        "state": "Goa",
+        "city": "Panaji",
+        "latitude": 15.491997,
+        "longitude": 73.81800065,
+        "owner": "Rupali Galve"
+    },
+    {
+        "state": "Himachal Pradesh",
+        "city": "Simla",
+        "latitude": 31.10002545,
+        "longitude": 77.16659704,
+        "owner": "Nensi Nagar"
+    },
+    {
+        "state": "Jammu And Kashmir",
+        "city": "Srinagar",
+        "latitude": 34.09997154,
+        "longitude": 74.81500932,
+        "owner": "Sajid Mughal"
+    },
+    {
+        "state": "Jharkhand",
+        "city": "Ranchi",
+        "latitude": 23.37000633,
+        "longitude": 85.33002641,
+        "owner": "Ranchi Wali"
+    },
+    {
+        "state": "Kerala",
+        "city": "Thiruvananthapuram",
+        "latitude": 8.499983743,
+        "longitude": 76.95002112,
+        "owner": "Laxman Chavan"
+    },
+    {
+        "state": "Kerala",
+        "city": "Kochi",
+        "latitude": 10.01500755,
+        "longitude": 76.22391557,
+        "owner": "Sham Singan"
+    },
+    {
+        "state": "Lakshadweep",
+        "city": "Kavaratti",
+        "latitude": 10.56257331,
+        "longitude": 72.63686717,
+        "owner": "Prit B"
+    },
+    {
+        "state": "Madhya Pradesh",
+        "city": "Indore",
+        "latitude": 22.71505922,
+        "longitude": 75.86502274,
+        "owner": "Pandurang Jagtap"
+    },
+    {
+        "state": "Manipur",
+        "city": "Imphal",
+        "latitude": 24.79997072,
+        "longitude": 93.95001705,
+        "owner": "Lakhan Dhotre"
+    },
+    {
+        "state": "Meghalaya",
+        "city": "Shillong",
+        "latitude": 25.57049217,
+        "longitude": 91.8800142,
+        "owner": "Raj Shelke"
+    },
+    {
+        "state": "Mizoram",
+        "city": "Aizawl",
+        "latitude": 23.71039899,
+        "longitude": 92.72001461,
+        "owner": "Tushar Kolekar"
+    },
+    {
+        "state": "Nagaland ",
+        "city": "Kohima",
+        "latitude": 25.6669979,
+        "longitude": 94.11657019,
+        "owner": "Sagar Mule"
+    },
+    {
+        "state": "Orissa",
+        "city": "Puri",
+        "latitude": 19.82042971,
+        "longitude": 85.90001746,
+        "owner": "Vaibhav Shende"
+    },
+    {
+        "state": "Orissa",
+        "city": "Bhubaneshwar",
+        "latitude": 20.27042808,
+        "longitude": 85.82736039,
+        "owner": "Sagar Kasbe"
+    },
+    {
+        "state": "Puducherry",
+        "city": "Puducherry",
+        "latitude": 11.93499371,
+        "longitude": 79.83000037,
+        "owner": "Akash Shrivastava"
+    },
+    {
+        "state": "Punjab",
+        "city": "Ludhiana",
+        "latitude": 30.92776206,
+        "longitude": 75.87225745,
+        "owner": "Siddhu Kore"
+    },
+    {
+        "state": "Rajasthan",
+        "city": "Jaipur",
+        "latitude": 26.92113324,
+        "longitude": 75.80998734,
+        "owner": "Chandrashekhar H"
+    },
+    {
+        "state": "Rajasthan",
+        "city": "Udaipur",
+        "latitude": 24.59998293,
+        "longitude": 73.73001094,
+        "owner": "Dhanaji Satav"
+    },
+    {
+        "state": "Tamil Nadu",
+        "city": "Chennai",
+        "latitude": 13.08998781,
+        "longitude": 80.27999874,
+        "owner": "Dhondiram Bhajibhakare"
+    },
+    {
+        "state": "Tamil Nadu",
+        "city": "Tiruvannamalai",
+        "latitude": 12.26037437,
+        "longitude": 79.09996741,
+        "owner": "Aniket Sanap"
+    }
+]

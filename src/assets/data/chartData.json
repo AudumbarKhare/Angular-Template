@@ -1,0 +1,33 @@
+[
+    {
+      "month": "January",
+      "online": 1000,
+      "cash": 800
+    },
+    {
+      "month": "February",
+      "online": 1500,
+      "cash": 1200
+    },
+    {
+      "month": "March",
+      "online": 2000,
+      "cash": 1600
+    },
+    {
+      "month": "April",
+      "online": 1800,
+      "cash": 1400
+    },
+    {
+      "month": "May",
+      "online": 2200,
+      "cash": 1800
+    },
+    {
+      "month": "June",
+      "online": 2500,
+      "cash": 2000
+    }
+  ]
+  

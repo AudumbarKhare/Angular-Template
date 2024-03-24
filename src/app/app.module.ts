@@ -20,7 +20,6 @@ import { CdkMenuModule } from '@angular/cdk/menu';
 import { BarChartComponent } from './dashboard/graph/bar-chart/bar-chart.component';
 import { FormsModule } from '@angular/forms';
 import { NgChartsModule } from 'ng2-charts';
-
 import { LeafletModule } from '@asymmetrik/ngx-leaflet'; 
 
 import { PieChartComponent } from './dashboard/graph/pie-chart/pie-chart.component';
@@ -28,6 +27,7 @@ import { TableComponent } from './dashboard/table/table.component';
 import { PaginatePipe } from './share/pipes/paginate.pipe';
 import { LineChartComponent } from './dashboard/graph/line-chart/line-chart.component';
 import { MapComponent } from './dashboard/graph/map/map.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -57,7 +57,8 @@ import { MapComponent } from './dashboard/graph/map/map.component';
     CdkMenuModule,
     NgChartsModule,
     FormsModule,
-    LeafletModule
+    LeafletModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
