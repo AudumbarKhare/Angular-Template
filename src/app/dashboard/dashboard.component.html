@@ -1,77 +1,92 @@
-<div class="stats-container">
-    <div class="stat-card bg-danger">
-        <div class="stat-icon">
-            <i class="fas fa-eye stat-icon"></i>
-        </div>
-        <div class="state-details">
-            <div class="stat-card-header">
-                <h2>VISITS</h2>
-            </div>
-            <div class="stat-card-content">
-                <span class="stat-number" data-target-number="914,001">914,001</span>
-            </div>
-        </div>
-    </div>
-    <div class="stat-card bg-warning">
-        <div class="stat-icon">
-            <i class="fas fa-redo stat-icon"></i>
-        </div>
-        <div class="state-details">
-            <div class="stat-card-header">
-                <h2>BOUNCE RATE</h2>
-            </div>
-            <div class="stat-card-content">
-                <span class="stat-number" data-target-number="46.41%">46.41%</span>
+<div class="row">
+    <div class="col-three col-sm-three col-md-three col-lg-three col-xl-three py-1">
+        <div class="card bg-danger ">
+            <div class="card-body ">
+                <div class="row text-white text-center">
+                    <div class="col-three col-sm-three col-md-three col-lg-three col-xl-three text-center">
+                        <i class="fas fa-chart-line icon"></i>
+                    </div>
+                    <div class="col-nine col-sm-nine col-md-nine col-lg-nine col-xl-nine">
+                        <h2 class="h2 text-white">PAGEVIEWS</h2>
+                        <span class="stat-number" data-target-number="4,054,876">4,054,876</span>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
-    <div class="stat-card bg-success">
-        <div class="stat-icon">
-            <i class="fas fa-chart-line stat-icon"></i>
-        </div>
-        <div class="state-details">
-            <div class="stat-card-header">
-                <h2>PAGEVIEWS</h2>
-            </div>
-            <div class="stat-card-content">
-                <span class="stat-number" data-target-number="4,054,876">4,054,876</span>
+
+    <div class="col-three col-sm-three col-md-three col-lg-three col-xl-three py-1 ">
+        <div class="card bg-warning">
+            <div class="card-body">
+                <div class="row text-white text-center">
+                    <div class="col-three col-sm-three col-md-three col-lg-three col-xl-three text-center">
+                        <i class="fas fa-redo icon"></i>
+                    </div>
+                    <div class="col-nine col-sm-nine col-md-nine col-lg-nine col-xl-nine">
+                        <h2 class="h2 text-white">BOUNCE RATE</h2>
+                        <span class="stat-number" data-target-number="46.41%">46.41%</span>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
-    <div class="stat-card bg-primary">
-        <div class="stat-icon">
-            <i class="fas fa-long-arrow-alt-up stat-icon"></i>
-        </div>
-        <div class="state-details">
-            <div class="stat-card-header">
-                <h2>GROWTH RATE</h2>
+
+    <div class="col-three col-sm-three col-md-three col-lg-three col-xl-three py-1">
+        <div class="card bg-success ">
+            <div class="card-body">
+                <div class="row text-white text-center">
+                    <div class="col-three col-sm-three col-md-three col-lg-three col-xl-three text-center ">
+                        <i class="fas fa-page4 icon"></i>
+                    </div>
+                    <div class="col-nine col-sm-nine col-md-nine col-lg-nine col-xl-nine">
+                        <h2 class="h2 text-white">PAGEVIEWS</h2>
+                        <span class="stat-number" data-target-number="4,054,876">4,054,876</span>
+                    </div>
+                </div>
+
             </div>
-            <div class="stat-card-content">
-                <span class="stat-number" data-target-number="46.43%">46.43%</span>
+        </div>
+    </div>
+
+    <div class="col-three col-sm-three col-md-three col-lg-three col-xl-three py-1 ">
+        <div class="card bg-primary">
+            <div class="card-body">
+                <div class="row text-white text-center">
+                    <div class="col-three col-sm-three col-md-three col-lg-three col-xl-three text-center">
+                        <i class="fas fa-long-arrow-alt-up icon"></i>
+                    </div>
+                    <div class="col-nine col-sm-nine col-md-nine col-lg-nine col-xl-nine">
+                        <h2 class="h2 text-white">GROWTH RATE</h2>
+                        <span class="stat-number" data-target-number="46.43%">46.43%</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="container">
-    <div class="col-two">
-        <div class="card-container">
+
+<div class="row">
+    <div class="col-six pa-1">
+        <div class="card">
             <div class="card-header">
                 <h3>Line Chart</h3>
             </div>
-            <div class="card-content">
+            <div class="card-body">
                 <!-- <app-pie-chart></app-pie-chart> -->
                 <app-line-chart></app-line-chart>
             </div>
         </div>
 
     </div>
-    <div class="col-two">
-        <div class="card-container">
+    <div class="col-six pa-1">
+        <div class="card">
             <div class="card-header">
                 <h3>Bar Graph</h3>
             </div>
-            <div class="card-content">
+            <div class="card-body">
                 <app-bar-chart></app-bar-chart>
             </div>
         </div>
@@ -79,24 +94,24 @@
     </div>
 </div>
 
-<div class="container">
-    <div class="col-two">
-        <div class="card-container">
+<div class="row">
+    <div class="col-six pa-1">
+        <div class="card">
             <div class="card-header">
                 <h3>Data Table</h3>
             </div>
-            <div class="card-content">
+            <div class="card-body">
                 <app-table></app-table>
             </div>
         </div>
     </div>
 
-    <div class="col-two">
-        <div class="card-container">
+    <div class="col-six pa-1">
+        <div class="card">
             <div class="card-header">
                 <h3>Branch Locations</h3>
             </div>
-            <div class="card-content">
+            <div class="card-body">
                 <app-map></app-map>
             </div>
         </div>

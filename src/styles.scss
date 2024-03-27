@@ -3,7 +3,114 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 @import '~@angular/cdk/overlay-prebuilt.css';
 
+// declare varibles 
+$spacer: 1rem;
 
+$primary: #0d6efd !default;
+$secondary: #6c757d !default;
+$success: #198754 !default;
+$danger: #dc3545 !default;
+$warning: #ffc107 !default;
+$info: #0dcaf0 !default;
+$light: #f8f9fa !default;
+$dark: #212529 !default;
+$body-bg: #fff !default;
+$white: #fff !default;
+$grey-300: #e0e0e0 !default;
+$grey-900: #212529 !default;
+
+
+//////////Variable declaretion end////////////
+
+
+@mixin container {
+    display: flex;
+    width: 100%;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    margin-right: auto;
+    margin-left: auto;
+    border: 1px solid;
+
+    @media(min-width:576px) {
+        max-width: 540px;
+    }
+
+    @media(min-width:768px) {
+        max-width: 720px;
+    }
+
+    @media(min-width:992px) {
+        max-width: 960px;
+    }
+
+    @media(min-width:1200px) {
+        max-width: 1140px;
+    }
+}
+
+@mixin row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -0.5rem;
+    margin-left: -0.5rem;
+}
+
+@mixin col($columns) {
+    flex: 0 0 auto;
+    width: calc(100%/12 * #{$columns});
+    max-width: calc(100%/12 * #{$columns});
+}
+
+@mixin card {
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    background-color: #fff;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15)
+}
+
+@mixin card-header {
+    padding: 0.75rem 1.25rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+@mixin card-body {
+    padding: 1.25rem;
+}
+
+@mixin card-footer {
+    padding: 0.75rem 1.25rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.125)
+}
+
+@mixin margin($top: 0, $right: 0, $bottom: 0, $left: 0) {
+    margin-top: $top !important;
+    margin-right: $right !important;
+    margin-bottom: $bottom !important;
+    margin-left: $left !important;
+}
+
+@mixin padding($top: 0, $right: 0, $bottom: 0, $left: 0) {
+    padding-top: $top !important;
+    padding-right: $right !important;
+    padding-bottom: $bottom !important;
+    padding-left: $left !important;
+}
+
+@mixin border($top: 0, $left: 0, $bottom: 0, $right: 0, $color: $grey-300, $radius: 0, $style: solid) {
+    border-top: $top;
+    border-left: $left;
+    border-bottom: $bottom;
+    border-right: $right;
+    border-style: $style;
+    border-color: $color;
+    border-radius: $radius;
+}
+
+
+/////mixin end////////
+
+//////css start/////////
 * {
     margin: 0;
     padding: 0;
@@ -11,70 +118,602 @@
 }
 
 body {
-    position: relative;
+
     font-family: 'Roboto', sans-sarif;
     background: #f4f7fa;
 }
 
 .container {
-    display: flex;
-    width: 100%;
+    @include container;
+}
+
+.row {
+    @include row;
+}
+
+.col-one {
+    @include col(1);
 }
 
 .col-two {
-    width: 50%;
-    padding: 10px;
+    @include col(2);
 }
 
-.col-triple {
-    flex: 1 0 33.33%;
-    padding: 10px;
+.col-three {
+    @include col(3);
 }
 
-.col-fourth {
-    flex: 1 0 25%;
-    padding: 10px;
+.col-four {
+    @include col(4);
 }
+
+.col-five {
+    @include col(5);
+}
+
+.col-six {
+    @include col(6);
+}
+
+.col-seven {
+    @include col(7);
+}
+
+.col-eight {
+    @include col(8);
+}
+
+.col-nine {
+    @include col(9);
+}
+
+.col-ten {
+    @include col(10);
+}
+
+.col-eleven {
+    @include col(11);
+}
+
+.col-twelve {
+    @include col(12);
+}
+
+@media (min-width: 576px) {
+    .col-sm-one {
+        @include col(1);
+    }
+
+    .col-sm-two {
+        @include col(2);
+    }
+
+    .col-sm-three {
+        @include col(3);
+    }
+
+    .col-sm-four {
+        @include col(4);
+    }
+}
+
+@media (min-width: 768px) {
+    .col-md-one {
+        @include col(1);
+    }
+
+    .col-md-two {
+        @include col(2);
+    }
+
+    .col-md-three {
+        @include col(3);
+    }
+
+    .col-md-four {
+        @include col(4);
+    }
+}
+
+@media (min-width: 992px) {
+    .col-lg-one {
+        @include col(1);
+    }
+
+    .col-lg-two {
+        @include col(2);
+    }
+
+    .col-lg-three {
+        @include col(3);
+    }
+
+    .col-lg-four {
+        @include col(4);
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-xl-one {
+        @include col(1);
+    }
+
+    .col-xl-two {
+        @include col(2);
+    }
+
+    .col-xl-three {
+        @include col(3);
+    }
+
+    .col-xl-four {
+        @include col(4);
+    }
+}
+
 
 // card code //
+
 .card {
-    display: flex;
-    flex-direction: column;
-    border-radius: .5rem;
-    background-color: #fff;
-    margin: 0 0 0 0;
-    box-shadow: 0 .25rem .5rem #e6edef;
-    color: #495057;
-
-
-    .card-header {
-        padding: 1rem 1.5rem;
-        border-bottom: 1px solid #edf1f7;
-        font-size: 1rem;
-        font-weight: 600;
-    }
-
-    .card-body {
-        padding: 1rem 1.5rem;
-    }
+    @include card;
 }
 
-// background color
-.bg-light-gray{
-    background-color: #fff !important;
-}
-.bg-warning {
-    background: #ffc107 !important;
+.card-header {
+    @include card-header;
 }
 
-.bg-danger {
-    background: #dc3545 !important;
+.card-body {
+    @include card-body;
+}
+
+.card-footer {
+    @include card-footer;
+}
+
+///card code end//
+
+//margin start//
+//1. all margin
+.ma-1 {
+    @include margin($spacer * 1, $spacer * 1, $spacer * 1, $spacer * 1);
+}
+
+.ma-2 {
+    @include margin($spacer * 2, $spacer * 2, $spacer * 2, $spacer * 2);
+}
+
+.ma-3 {
+    @include margin($spacer * 3, $spacer * 3, $spacer * 3, $spacer * 3);
+}
+
+.ma-4 {
+    @include margin($spacer * 4, $spacer * 4, $spacer * 4, $spacer * 4);
+}
+
+//2. top margin
+.mt-1 {
+    @include margin($spacer * 1, 0, 0, 0);
+}
+
+.mt-2 {
+    @include margin($spacer * 2, 0, 0, 0);
+}
+
+.mt-3 {
+    @include margin($spacer * 3, 0, 0, 0);
+}
+
+.mt-4 {
+    @include margin($spacer * 4, 0, 0, 0);
+}
+
+//3. right margin
+.mr-1 {
+    @include margin(0, $spacer * 1, 0, 0);
+}
+
+.mr-2 {
+    @include margin(0, $spacer * 2, 0, 0);
+}
+
+.mr-3 {
+    @include margin(0, $spacer * 3, 0, 0);
+}
+
+.mr-4 {
+    @include margin(0, $spacer * 4, 0, 0);
+}
+
+//4. bottom margin
+.mb-1 {
+    @include margin(0, 0, $spacer * 1, 0);
+}
+
+.mb-2 {
+    @include margin(0, 0, $spacer * 2, 0);
+}
+
+.mb-3 {
+    @include margin(0, 0, $spacer * 3, 0);
+}
+
+.mb-4 {
+    @include margin(0, 0, $spacer * 4, 0);
+}
+
+//5. left margin
+.ml-1 {
+    @include margin(0, 0, 0, $spacer * 1);
+}
+
+.ml-2 {
+    @include margin(0, 0, 0, $spacer * 2);
+}
+
+.ml-3 {
+    @include margin(0, 0, 0, $spacer * 3);
+}
+
+.ml-4 {
+    @include margin(0, 0, 0, $spacer * 4);
+}
+
+// 6. horizontal margin
+.my-1 {
+    @include margin(0, $spacer * 1, 0, $spacer * 1);
+}
+
+.my-2 {
+    @include margin(0, $spacer * 2, 0, $spacer * 2);
+}
+
+.my-3 {
+    @include margin(0, $spacer * 3, 0, $spacer * 3);
+}
+
+.my-4 {
+    @include margin(0, $spacer * 4, 0, $spacer * 4);
+}
+
+// 7. vertical margin
+.mx-1 {
+    @include margin($spacer * 1, 0, $spacer * 1, 0);
+}
+
+.mx-2 {
+    @include margin($spacer * 2, 0, $spacer * 2, 0);
+}
+
+.mx-3 {
+    @include margin($spacer * 3, 0, $spacer * 3, 0);
+}
+
+.mx-4 {
+    @include margin($spacer * 4, 0, $spacer * 4, 0);
+}
+
+//margin end//
+
+//padding start//
+
+//1. all padding
+.pa-1 {
+    @include padding($spacer * 1, $spacer * 1, $spacer * 1, $spacer * 1);
+}
+
+.pa-2 {
+    @include padding($spacer * 2, $spacer * 2, $spacer * 2, $spacer * 2);
+}
+
+.pa-3 {
+    @include padding($spacer * 3, $spacer * 3, $spacer * 3, $spacer * 3);
+}
+
+.pa-4 {
+    @include padding($spacer * 4, $spacer * 4, $spacer * 4, $spacer * 4);
+}
+
+//2. top padding
+.pt-1 {
+    @include padding($spacer * 1, 0, 0, 0);
+}
+
+.pt-2 {
+    @include padding($spacer * 2, 0, 0, 0);
+}
+
+.pt-3 {
+    @include padding($spacer * 3, 0, 0, 0);
+}
+
+.pt-4 {
+    @include padding($spacer * 4, 0, 0, 0);
+}
+
+//3. right padding
+.pr-1 {
+    @include padding(0, $spacer * 1, 0, 0);
+}
+
+.pr-2 {
+    @include padding(0, $spacer * 2, 0, 0);
+}
+
+.pr-3 {
+    @include padding(0, $spacer * 3, 0, 0);
+}
+
+.pr-4 {
+    @include padding(0, $spacer * 4, 0, 0);
+}
+
+//4. bottom padding
+.pb-1 {
+    @include padding(0, 0, $spacer * 1, 0);
+}
+
+.pb-2 {
+    @include padding(0, 0, $spacer * 2, 0);
+}
+
+.pb-3 {
+    @include padding(0, 0, $spacer * 3, 0);
+}
+
+.pb-4 {
+    @include padding(0, 0, $spacer * 4, 0);
+}
+
+//5. left padding
+.pl-1 {
+    @include padding(0, 0, 0, $spacer * 1);
+}
+
+.pl-2 {
+    @include padding(0, 0, 0, $spacer * 2);
+}
+
+.pl-3 {
+    @include padding(0, 0, 0, $spacer * 3);
+}
+
+.pl-4 {
+    @include padding(0, 0, 0, $spacer * 4);
+}
+
+// 6. horizontal padding
+.py-1 {
+    @include padding(0, $spacer * 1, 0, $spacer * 1);
+}
+
+.py-2 {
+    @include padding(0, $spacer * 2, 0, $spacer * 2);
+}
+
+.py-3 {
+    @include padding(0, $spacer * 3, 0, $spacer * 3);
+}
+
+.py-4 {
+    @include padding(0, $spacer * 4, 0, $spacer * 4);
+}
+
+// 7. vertical padding
+.px-1 {
+    @include padding($spacer * 1, 0, $spacer * 1, 0);
+}
+
+.px-2 {
+    @include padding($spacer * 2, 0, $spacer * 2, 0);
+}
+
+.px-3 {
+    @include padding($spacer * 3, 0, $spacer * 3, 0);
+}
+
+.px-4 {
+    @include padding($spacer * 4, 0, $spacer * 4, 0);
+}
+
+//padding end//
+
+// background color start//
+.bg-primary {
+    background-color: $primary !important;
+}
+
+.bg-secondary {
+    background-color: $secondary !important;
 }
 
 .bg-success {
-    background: #28a745 !important;
+    background-color: $success !important;
 }
 
-.bg-primary {
-    background: #007bff !important;
+.bg-danger {
+    background-color: $danger !important;
+}
+
+.bg-warning {
+    background-color: $warning !important;
+}
+
+.bg-info {
+    background-color: $info !important;
+}
+
+.bg-light {
+    background-color: $light !important;
+}
+
+.bg-dark {
+    background-color: $dark !important;
+}
+
+.bg-body {
+    background-color: $body-bg !important;
+}
+
+.bg-white {
+    background-color: $white !important;
+}
+
+//background color end//
+
+//text color start//
+.text-primary {
+    color: $primary !important;
+}
+
+.text-secondary {
+    color: $secondary !important;
+}
+
+.text-success {
+    color: $success !important;
+}
+
+.text-danger {
+    color: $danger !important;
+}
+
+.text-warning {
+    color: $warning !important;
+}
+
+.text-info {
+    color: $info !important;
+}
+
+.text-light {
+    color: $light !important;
+}
+
+.text-dark {
+    color: $dark !important;
+}
+
+.text-body {
+    color: $body-bg !important;
+}
+
+.text-white {
+    color: $white !important;
+}
+
+//text color end//
+
+//text alignment start//
+.text-end {
+    text-align: end;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.text-wrap {
+    white-space: normal !important;
+}
+
+.text-nowrap {
+    white-space: nowrap !important;
+}
+
+.text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+//text alignment end//
+
+//border//
+
+.border {
+    @include border(1px, 1px, 1px, 1px)
+}
+
+.border-top {
+    @include border(1px)
+}
+
+.border-left {
+    @include border(0px, 1px)
+}
+
+.border-bottom {
+    @include border(0, 0, 1px)
+}
+
+.border-right {
+    @include border(0, 0, 0, 1px)
+}
+
+//
+.border-dark {
+    @include border(1px, 1px, 1px, 1px, $dark)
+}
+
+.border-top-dark {
+    @include border(1px, 0, 0, 0, $dark)
+}
+
+.border-left-dark {
+    @include border(0px, 1px, 0, 0, $dark)
+}
+
+.border-bottom-dark {
+    @include border(0, 0, 1px, 0, $dark)
+}
+
+.border-right-dark {
+    @include border(0, 0, 0, 1px, $dark)
+}
+
+//border end//
+
+//headnig style start//
+
+.h1,.h2,.h3,.h4,.h5,.h6{
+    margin-bottom: $spacer*0.5;
+    color:$grey-900;
+    font-family: inherit;
+    font-style: 500;
+}
+
+.h1{
+    font-size: 2.5rem;
+}
+
+.h2{
+    font-size: 2rem;
+}
+
+.h3{
+    font-size: 1.75rem;
+}
+
+.h4{
+    font-size: 1.5rem;
+}
+
+.h5{
+    font-size: 1.25rem;
+}
+
+.h6{
+    font-size: 1rem;
 }
